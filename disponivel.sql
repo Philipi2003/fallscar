@@ -12,7 +12,7 @@ where c.manutencao <> 0 and not exists(
 -- verifica se o carro está reservado no dia
 select c.id_carro
 from carros as c
-where c.manutencao <> 0 and exists(
+where exists(
   select *
   from alocacoes as a
   join periodos as p 
